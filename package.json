@@ -1,0 +1,33 @@
+{
+  "name": "offline-wedding-seating",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "离线婚礼桌位编排器：宾客关系 + 真实场地布局，glpk.js 自动排座，IndexedDB 本地工程",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "npm run solver:test && npm run geometry:test",
+    "solver:test": "node --experimental-vm-modules scripts/solver-smoke.mjs",
+    "geometry:test": "node scripts/geometry-smoke.mjs",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "dependencies": {
+    "glpk.js": "^4.0.2",
+    "idb": "^8.0.0",
+    "konva": "^9.3.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-konva": "^18.2.10"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "esbuild": "^0.24.2",
+    "playwright": "^1.63.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
